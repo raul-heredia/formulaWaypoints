@@ -16,7 +16,26 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            if (route.name === 'Mapa') {
+              iconName = focused
+                ? 'ios-map'
+                : 'ios-map-outline';
+            } else if (route.name === 'Llista') {
+              iconName = focused ? 'ios-list' : 'ios-list-outline';
+            }
+
+            // You can return any component that you like here!
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: '#FF1801',
+          tabBarInactiveTintColor: '#90a4ae',
+        })}
+      >
         <Tab.Screen name="Mapa" component={Map} />
         <Tab.Screen name="Llista" component={Llista} />
       </Tab.Navigator>
