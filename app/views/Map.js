@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Dimensions, Text, View } from 'react-native';
+import { StyleSheet, Dimensions, Text, View, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
 import { circuitos } from '../data/circuitos';
+import { Llista } from './Llista';
 
 const styles = StyleSheet.create({
     container: {
@@ -22,16 +23,21 @@ export class Map extends React.Component {
     }
     render() {
         let marcadors = circuitos.map(circuito => (
-            < MapView.Marker
-                key={circuito.gp}
-                coordinate={{
-                    latitude: circuito.lat,
-                    longitude: circuito.lng,
-                }}
-                title={circuito.gp ? circuito.gp : circuito.pais} // Si el objeto no tiene Gran Premio pone el pais (Esto ocurre en los circuitos historicos)
-                description={circuito.circuito}
-                pinColor={circuito.tipo == 'actual' ? '#FF1801' : '#8E24AA'}
-            />
+            <TouchableOpacity key={circuito.gp ? circuito.gp : circuito.pais + " " + circuito.circuito}
+                onPress={() => this.props.navigation.navigate('Llista')}>
+                < MapView.Marker
+                    key={circuito.gp ? circuito.gp : circuito.pais + " " + circuito.circuito} // Si el objeto no tiene Gran Premio pone el pais y el circuito (Esto ocurre en los circuitos historicos, así se evita que la clave sea igual si dos circuitos historicos son del mismo país)
+                    coordinate={{
+                        latitude: circuito.lat,
+                        longitude: circuito.lng,
+                    }}
+                    title={circuito.gp ? circuito.gp : circuito.pais} // Si el objeto no tiene Gran Premio pone el pais (Esto ocurre en los circuitos historicos)
+                    description={circuito.circuito}
+                    pinColor={circuito.tipo == 'actual' ? '#FF1801' : '#8E24AA'}
+                    component={Llista}
+                />
+            </TouchableOpacity>
+
         ));
         return (
             <View style={styles.container} >
