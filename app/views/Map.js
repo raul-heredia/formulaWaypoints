@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Text, View } from 'react-native';
 import MapView from 'react-native-maps';
+import { circuitos } from '../data/circuitos';
 
 const styles = StyleSheet.create({
     container: {
@@ -15,56 +16,36 @@ const styles = StyleSheet.create({
     },
 });
 const mode = 'driving'; // 'walking';
-
-
 export class Map extends React.Component {
-    coords = [{
-        lat: 41.390205,
-        lng: 2.174007,
-    }, {
-        lat: 41.380205,
-        lng: 2.175007,
-    }]
     constructor(props) {
         super(props);
-
     }
     render() {
+        let marcadors = circuitos.map(circuito => (
+            < MapView.Marker
+                key={circuito.pais}
+                coordinate={{
+                    latitude: circuito.lat,
+                    longitude: circuito.lng,
+                }}
+                title={circuito.pais}
+                description={circuito.circuito}
+                pinColor={circuito.tipo == 'actual' ? '#FF1801' : '#8E24AA'}
+            />
+        ));
         return (
-            <View style={styles.container}>
+            <View style={styles.container} >
                 <Text> Mapa </Text>
                 <MapView style={styles.mapStyle} initialRegion={{
-                    latitude: this.coords[0].lat,
-                    longitude: this.coords[0].lng,
-                    latitudeDelta: 0.0622,
-                    longitudeDelta: 0.0121,
+                    latitude: 41.390205,
+                    longitude: 2.174007,
+                    latitudeDelta: 10.0622,
+                    longitudeDelta: 2.0121,
                 }}>
 
-                    <MapView.Marker
-                        coordinate={{
-                            latitude: this.coords[0].lat,
-                            longitude: this.coords[0].lng
-                        }}
-                        title={"sortida"}
-                        description={"punt A"}
-                    />
-                    <MapView.Marker
-                        coordinate={{
-                            latitude: this.coords[1].lat,
-                            longitude: this.coords[1].lng
-                        }}
-                        title={"arribada"}
-                        description={"punt B"}
-                    />
-                    <MapView.Marker
-                        coordinate={{
-                            latitude: this.coords[1].lat,
-                            longitude: this.coords[1].lng
-                        }}
-                        title={"arribada"}
-                        description={"punt B"}
-                    />
-                    <MapView.Polyline
+                    {marcadors}
+
+                    {/* <MapView.Polyline
                         coordinates={[
                             { latitude: 41.390205, longitude: 2.174007, },
                             { latitude: 41.380205, longitude: 2.175007 },
@@ -80,7 +61,7 @@ export class Map extends React.Component {
                             '#7F0000'
                         ]}
                         strokeWidth={6}
-                    />
+                    /> */}
 
                 </MapView>
 
