@@ -23,12 +23,12 @@ export class Map extends React.Component {
     render() {
         let marcadors = circuitos.map(circuito => (
             < MapView.Marker
-                key={circuito.pais}
+                key={circuito.gp}
                 coordinate={{
                     latitude: circuito.lat,
                     longitude: circuito.lng,
                 }}
-                title={circuito.pais}
+                title={circuito.gp ? circuito.gp : circuito.pais} // Si el objeto no tiene Gran Premio pone el pais (Esto ocurre en los circuitos historicos)
                 description={circuito.circuito}
                 pinColor={circuito.tipo == 'actual' ? '#FF1801' : '#8E24AA'}
             />
