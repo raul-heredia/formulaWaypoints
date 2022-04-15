@@ -3,6 +3,7 @@
     "name": "formulaWaypoints",
     "slug": "formulaWaypoints",
     "version": "1.0.0",
+    "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
       "**/*"
     ]

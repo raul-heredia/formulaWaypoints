@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Image, StyleSheet } from 'react-native';
+import { Text, View, FlatList, Dimensions, Image, StyleSheet } from 'react-native';
 
 import { circuitos } from '../data/circuitos';
 
@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         alignItems: "center",
-        paddingTop: 22
+        paddingTop: 22,
+        width: Dimensions.get('screen').width,
     },
     item: {
         padding: 10,
@@ -20,6 +21,8 @@ const styles = StyleSheet.create({
         height: 119.5
     },
     text: (tipoCircuito) => ({
+        flex: 1,
+        flexWrap: 'wrap',
         fontWeight: 'bold',
         marginLeft: 5,
         color: tipoCircuito == "actual" ? "#FF1801" : "#8E24AA"
@@ -35,7 +38,6 @@ export class Lista extends React.Component {
                     renderItem={({ item }) => <View style={styles.container} key={item.circuito}><Image source={item.imagen} style={styles.img} /><Text style={styles.text(item.tipo)}> {item.circuito}</Text></View>}
                     keyExtractor={item => item.circuito}
                 >
-
                 </FlatList>
             </View >
         );

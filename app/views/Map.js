@@ -4,6 +4,7 @@ import MapView from 'react-native-maps';
 import { circuitos } from '../data/circuitos';
 import { Llista } from './Lista';
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
