@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 // Componentes
 import { Map } from './app/views/Map';
-import { Llista } from './app/views/Llista';
+import { Lista } from './app/views/Lista';
 
 
 const Tab = createBottomTabNavigator();
@@ -25,7 +25,7 @@ export default function App() {
               iconName = focused
                 ? 'ios-map'
                 : 'ios-map-outline';
-            } else if (route.name === 'Llista') {
+            } else if (route.name === 'Lista') {
               iconName = focused ? 'ios-list' : 'ios-list-outline';
             }
 
@@ -37,7 +37,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Mapa" component={Map} />
-        <Tab.Screen name="Llista" component={Llista} />
+        <Tab.Screen name="Lista" component={Lista} />
       </Tab.Navigator>
     </NavigationContainer>
   );

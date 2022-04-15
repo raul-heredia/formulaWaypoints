@@ -4,6 +4,7 @@ export let circuitos = [
         gp: "Gran Premio de Bahrein",
         lat: 26.0325,
         lng: 50.510555555556,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
         tipo: "actual"
     },
     {
@@ -11,6 +12,7 @@ export let circuitos = [
         gp: "Gran Premio de Arabia Saudí",
         lat: 21.543333,
         lng: 39.172779,
+        imagen: require("../assets/images/circuitos/jeddah.png"),
         tipo: "actual"
     },
     {
@@ -18,6 +20,7 @@ export let circuitos = [
         gp: "Gran Premio de Australia",
         lat: -37.849722222222,
         lng: 144.96833333333,
+        imagen: require("../assets/images/circuitos/melbourne.png"),
         tipo: "actual"
     },
     {
@@ -25,6 +28,7 @@ export let circuitos = [
         gp: "Gran Premio de la Emilia Romagna",
         lat: 44.341111111111,
         lng: 11.713333333333,
+        imagen: require("../assets/images/circuitos/imola.png"),
         tipo: "actual"
     },
     {
@@ -32,6 +36,7 @@ export let circuitos = [
         gp: "Gran Premio de Miami",
         lat: 25.957960,
         lng: -80.239311,
+        imagen: require("../assets/images/circuitos/miami.png"),
         tipo: "actual"
     },
     {
@@ -39,6 +44,7 @@ export let circuitos = [
         gp: "Gran Premio de España",
         lat: 41.57,
         lng: 2.2611111111111,
+        imagen: require("../assets/images/circuitos/barcelona.png"),
         tipo: "actual"
     },
     {
@@ -46,6 +52,7 @@ export let circuitos = [
         gp: "Gran Premio de Mónaco",
         lat: 43.734722222222,
         lng: 7.4205555555556,
+        imagen: require("../assets/images/circuitos/monaco.png"),
         tipo: "actual"
     },
     {
@@ -53,6 +60,7 @@ export let circuitos = [
         gp: "Gran Premio De Azerbaiyán",
         lat: 40.3725,
         lng: 49.8533,
+        imagen: require("../assets/images/circuitos/baku.png"),
         tipo: "actual"
     },
     {
@@ -60,6 +68,7 @@ export let circuitos = [
         gp: "Gran Premio De Canadá",
         lat: 45.500577777778,
         lng: -73.522461111111,
+        imagen: require("../assets/images/circuitos/canada.png"),
         tipo: "actual"
     },
     {
@@ -67,6 +76,7 @@ export let circuitos = [
         gp: "Gran Premio De Gran Bretaña",
         lat: 52.073833038,
         lng: -1.016833266,
+        imagen: require("../assets/images/circuitos/silverstone.png"),
         tipo: "actual"
     },
     {
@@ -74,6 +84,7 @@ export let circuitos = [
         gp: "Gran Premio De Austria",
         lat: 47.218499126,
         lng: 14.758830298,
+        imagen: require("../assets/images/circuitos/austria.png"),
         tipo: "actual"
     },
     {
@@ -81,6 +92,7 @@ export let circuitos = [
         gp: "Gran Premio De Francia",
         lat: 43.250555555556,
         lng: 5.7916666666667,
+        imagen: require("../assets/images/circuitos/francia.png"),
         tipo: "actual"
     },
     {
@@ -88,6 +100,7 @@ export let circuitos = [
         gp: "Gran Premio De Hungría",
         lat: 47.573997704,
         lng: 19.24249903,
+        imagen: require("../assets/images/circuitos/hungaroring.png"),
         tipo: "actual"
     },
     {
@@ -95,6 +108,7 @@ export let circuitos = [
         gp: "Gran Premio De Bélgica",
         lat: 50.437222222222,
         lng: 5.9713888888889,
+        imagen: require("../assets/images/circuitos/spa.png"),
         tipo: "actual"
     },
     {
@@ -102,6 +116,7 @@ export let circuitos = [
         gp: "Gran Premio De Los Paises Bajos",
         lat: 52.3866234535,
         lng: 4.53788451512,
+        imagen: require("../assets/images/circuitos/zandvoort.png"),
         tipo: "actual"
     },
     {
@@ -109,6 +124,7 @@ export let circuitos = [
         gp: "Gran Premio De Italia",
         lat: 45.620555555556,
         lng: 9.2894444444444,
+        imagen: require("../assets/images/circuitos/monza.png"),
         tipo: "actual"
     },
     {
@@ -116,6 +132,7 @@ export let circuitos = [
         gp: "Gran Premio De Singapur",
         lat: 1.291403,
         lng: 103.864147,
+        imagen: require("../assets/images/circuitos/singapur.png"),
         tipo: "actual"
     },
     {
@@ -123,6 +140,7 @@ export let circuitos = [
         gp: "Gran Premio De Japón",
         lat: 34.843055555556,
         lng: 136.54055555556,
+        imagen: require("../assets/images/circuitos/suzuka.png"),
         tipo: "actual"
     },
     {
@@ -130,6 +148,7 @@ export let circuitos = [
         gp: "Gran Premio De Estados Unidos",
         lat: 30.1328,
         lng: -97.6411,
+        imagen: require("../assets/images/circuitos/cota.png"),
         tipo: "actual"
     },
     {
@@ -137,6 +156,7 @@ export let circuitos = [
         gp: "Gran Premio De México",
         lat: 19.404197222222,
         lng: -99.088747222222,
+        imagen: require("../assets/images/circuitos/mexico.png"),
         tipo: "actual"
     },
     {
@@ -144,6 +164,7 @@ export let circuitos = [
         gp: "Gran Premio De Brasil",
         lat: -23.701111111111,
         lng: -46.697222222222,
+        imagen: require("../assets/images/circuitos/interlagos.png"),
         tipo: "actual"
     },
     {
@@ -151,6 +172,7 @@ export let circuitos = [
         gp: "Gran Premio De Abu Dhabi",
         lat: 24.466998132,
         lng: 54.601830926,
+        imagen: require("../assets/images/circuitos/abuDhabi.png"),
         tipo: "actual"
     },
 
@@ -161,6 +183,7 @@ export let circuitos = [
         pais: "Alemania",
         lat: 50.335555555556,
         lng: 6.9475,
+        imagen: require("../assets/images/circuitos/nurburgring.png"),
         tipo: "historico"
     },
     {
@@ -168,6 +191,7 @@ export let circuitos = [
         pais: "Alemania",
         lat: 49.327777777778,
         lng: 8.5658333333333,
+        imagen: require("../assets/images/circuitos/hockenheimring.png"),
         tipo: "historico"
     },
     {
@@ -175,6 +199,7 @@ export let circuitos = [
         pais: "Malaysia",
         lat: 2.756330308,
         lng: 101.73583039,
+        imagen: require("../assets/images/circuitos/sepang.png"),
         tipo: "historico"
     },
     {
@@ -182,6 +207,7 @@ export let circuitos = [
         pais: "Francia",
         lat: 46.8833,
         lng: 3.15,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
         tipo: "historico"
     },
     {
@@ -189,6 +215,7 @@ export let circuitos = [
         pais: "Japón",
         lat: 35.369665188,
         lng: 138.922662976,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
         tipo: "historico"
     },
     {
@@ -196,6 +223,7 @@ export let circuitos = [
         pais: "Estados Unidos",
         lat: 39.795017,
         lng: -86.234566,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
         tipo: "historico"
     },
     {
@@ -203,6 +231,7 @@ export let circuitos = [
         pais: "España",
         lat: 36.7089,
         lng: -6.035206,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
         tipo: "historico"
     },
     {
@@ -210,6 +239,15 @@ export let circuitos = [
         pais: "España",
         lat: 40.616809,
         lng: -3.585265,
+        imagen: require("../assets/images/circuitos/bahrein.png"),
+        tipo: "historico"
+    },
+    {
+        circuito: "Istanbul Park",
+        pais: "Turquia",
+        lat: 40.957870,
+        lng: 29.410341,
+        imagen: require("../assets/images/circuitos/turquia.png"),
         tipo: "historico"
     },
 
