@@ -231,7 +231,7 @@ export let circuitos = [
         pais: "España",
         lat: 36.7089,
         lng: -6.035206,
-        imagen: require("../assets/images/circuitos/bahrein.png"),
+        imagen: require("../assets/images/circuitos/jerez.png"),
         tipo: "historico"
     },
     {

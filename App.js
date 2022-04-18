@@ -18,10 +18,10 @@ const MapStack = createStackNavigator();
 
 function MapStackScreen() {
   return (
-    <MapStack.Navigator initialRouteName='Map' screenOptions={{
+    <MapStack.Navigator initialRouteName='Mapa de Circuitos' screenOptions={{
       headerBackTitleVisible: false
     }}>
-      <MapStack.Screen name="Map" component={Map} />
+      <MapStack.Screen name="Mapa de Circuitos" component={Map} />
       <MapStack.Screen name="Detalles" component={Detalles} />
     </MapStack.Navigator>
   );
@@ -30,8 +30,8 @@ function MapStackScreen() {
 const ListStack = createStackNavigator();
 function ListStackScreen() {
   return (
-    <ListStack.Navigator initialRouteName='Lista'>
-      <ListStack.Screen name="Lista" component={Lista} />
+    <ListStack.Navigator initialRouteName='Listado de Circuitos'>
+      <ListStack.Screen name="Listado de Circuitos" component={Lista} />
     </ListStack.Navigator>
   );
 }

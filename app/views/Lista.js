@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList, Dimensions, Image, StyleSheet } from 'react-native';
+import { Text, View, FlatList, Dimensions, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { circuitos } from '../data/circuitos';
 
@@ -35,8 +35,9 @@ export class Lista extends React.Component {
             <View>
                 <FlatList
                     data={circuitos}
-                    renderItem={({ item }) => <View style={styles.container} key={item.circuito}><Image source={item.imagen} style={styles.img} /><Text style={styles.text(item.tipo)}> {item.circuito}</Text></View>}
+                    renderItem={({ item }) => <View style={styles.container} key={item.circuito}><TouchableOpacity style={styles.container} identifier={item.circuito} onPress={(ev) => { console.log(ev.nativeEvent.identifier) }}><Image source={item.imagen} style={styles.img} /><Text style={styles.text(item.tipo)}> {item.circuito}</Text></TouchableOpacity></View>}
                     keyExtractor={item => item.circuito}
+                    onPress
                 >
                 </FlatList>
             </View >
