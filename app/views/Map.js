@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, Dimensions, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Dimensions, Text, View } from 'react-native';
 import MapView from 'react-native-maps';
+import { createStackNavigator } from '@react-navigation/stack';
 import { circuitos } from '../data/circuitos';
-import { Llista } from './Lista';
-
+import { Detalles } from './Detalles';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,22 +18,31 @@ const styles = StyleSheet.create({
     },
 });
 const mode = 'driving'; // 'walking';
+
+
+
 export class Map extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
+
         let marcadors = circuitos.map(circuito => (
             < MapView.Marker
-                key={circuito.gp ? circuito.gp : circuito.pais + " " + circuito.circuito} // Si el objeto no tiene Gran Premio pone el pais y el circuito (Esto ocurre en los circuitos historicos, así se evita que la clave sea igual si dos circuitos historicos son del mismo país)
+                key={circuito.circuito}
+                identifier={circuito.circuito}
                 coordinate={{
                     latitude: circuito.lat,
                     longitude: circuito.lng,
                 }}
-                title={circuito.gp ? circuito.gp : circuito.pais} // Si el objeto no tiene Gran Premio pone el pais (Esto ocurre en los circuitos historicos)
-                description={circuito.circuito}
+                /* title={circuito.gp ? circuito.gp : circuito.pais} // Si el objeto no tiene Gran Premio pone el pais (Esto ocurre en los circuitos historicos)
+                description={circuito.circuito} */
                 pinColor={circuito.tipo == 'actual' ? '#FF1801' : '#8E24AA'}
-                component={Llista}
+                onPress={(ev) => {
+                    let circuito = ev.nativeEvent.id;
+                    this.props.navigation.navigate('Detalles', { circuito: circuito });
+                }
+                }
             />
 
         ));
@@ -46,9 +55,7 @@ export class Map extends React.Component {
                     latitudeDelta: 10.0622,
                     longitudeDelta: 2.0121,
                 }}>
-
                     {marcadors}
-
                     {/* <MapView.Polyline
                         coordinates={[
                             { latitude: 41.390205, longitude: 2.174007, },
