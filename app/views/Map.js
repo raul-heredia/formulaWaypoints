@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Text, View } from 'react-native';
 import MapView from 'react-native-maps';
-import { createStackNavigator } from '@react-navigation/stack';
 import { circuitos } from '../data/circuitos';
-import { Detalles } from './Detalles';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,14 +17,11 @@ const styles = StyleSheet.create({
 });
 const mode = 'driving'; // 'walking';
 
-
-
 export class Map extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-
         let marcadors = circuitos.map(circuito => (
             < MapView.Marker
                 key={circuito.circuito}

@@ -5,6 +5,7 @@ export let circuitos = [
         lat: 26.0325,
         lng: 50.510555555556,
         imagen: require("../assets/images/circuitos/bahrein.png"),
+        fecha: "18-20 Marzo",
         tipo: "actual"
     },
     {
@@ -13,6 +14,7 @@ export let circuitos = [
         lat: 21.543333,
         lng: 39.172779,
         imagen: require("../assets/images/circuitos/jeddah.png"),
+        fecha: "25-27 Marzo",
         tipo: "actual"
     },
     {
@@ -21,6 +23,7 @@ export let circuitos = [
         lat: -37.849722222222,
         lng: 144.96833333333,
         imagen: require("../assets/images/circuitos/melbourne.png"),
+        fecha: "08-10 Abril",
         tipo: "actual"
     },
     {
@@ -29,6 +32,7 @@ export let circuitos = [
         lat: 44.341111111111,
         lng: 11.713333333333,
         imagen: require("../assets/images/circuitos/imola.png"),
+        fecha: "22-24 Abril",
         tipo: "actual"
     },
     {
@@ -37,6 +41,7 @@ export let circuitos = [
         lat: 25.957960,
         lng: -80.239311,
         imagen: require("../assets/images/circuitos/miami.png"),
+        fecha: "06-08 Mayo",
         tipo: "actual"
     },
     {
@@ -45,6 +50,7 @@ export let circuitos = [
         lat: 41.57,
         lng: 2.2611111111111,
         imagen: require("../assets/images/circuitos/barcelona.png"),
+        fecha: "20-22 Mayo",
         tipo: "actual"
     },
     {
@@ -53,6 +59,7 @@ export let circuitos = [
         lat: 43.734722222222,
         lng: 7.4205555555556,
         imagen: require("../assets/images/circuitos/monaco.png"),
+        fecha: "27-29 Mayo",
         tipo: "actual"
     },
     {
@@ -61,6 +68,7 @@ export let circuitos = [
         lat: 40.3725,
         lng: 49.8533,
         imagen: require("../assets/images/circuitos/baku.png"),
+        fecha: "10-12 Junio",
         tipo: "actual"
     },
     {
@@ -69,6 +77,7 @@ export let circuitos = [
         lat: 45.500577777778,
         lng: -73.522461111111,
         imagen: require("../assets/images/circuitos/canada.png"),
+        fecha: "17-19 Junio",
         tipo: "actual"
     },
     {
@@ -77,6 +86,7 @@ export let circuitos = [
         lat: 52.073833038,
         lng: -1.016833266,
         imagen: require("../assets/images/circuitos/silverstone.png"),
+        fecha: "01-03 Julio",
         tipo: "actual"
     },
     {
@@ -85,6 +95,7 @@ export let circuitos = [
         lat: 47.218499126,
         lng: 14.758830298,
         imagen: require("../assets/images/circuitos/austria.png"),
+        fecha: "08-10 Julio",
         tipo: "actual"
     },
     {
@@ -93,6 +104,7 @@ export let circuitos = [
         lat: 43.250555555556,
         lng: 5.7916666666667,
         imagen: require("../assets/images/circuitos/francia.png"),
+        fecha: "22-24 Julio",
         tipo: "actual"
     },
     {
@@ -101,6 +113,7 @@ export let circuitos = [
         lat: 47.573997704,
         lng: 19.24249903,
         imagen: require("../assets/images/circuitos/hungaroring.png"),
+        fecha: "29-31 Julio",
         tipo: "actual"
     },
     {
@@ -109,6 +122,7 @@ export let circuitos = [
         lat: 50.437222222222,
         lng: 5.9713888888889,
         imagen: require("../assets/images/circuitos/spa.png"),
+        fecha: "26-28 Agosto",
         tipo: "actual"
     },
     {
@@ -117,6 +131,7 @@ export let circuitos = [
         lat: 52.3866234535,
         lng: 4.53788451512,
         imagen: require("../assets/images/circuitos/zandvoort.png"),
+        fecha: "02-04 Septiembre",
         tipo: "actual"
     },
     {
@@ -125,6 +140,7 @@ export let circuitos = [
         lat: 45.620555555556,
         lng: 9.2894444444444,
         imagen: require("../assets/images/circuitos/monza.png"),
+        fecha: "09-11 Septiembre",
         tipo: "actual"
     },
     {
@@ -133,6 +149,7 @@ export let circuitos = [
         lat: 1.291403,
         lng: 103.864147,
         imagen: require("../assets/images/circuitos/singapur.png"),
+        fecha: "30 Septiembre - 02 Octubre",
         tipo: "actual"
     },
     {
@@ -141,6 +158,7 @@ export let circuitos = [
         lat: 34.843055555556,
         lng: 136.54055555556,
         imagen: require("../assets/images/circuitos/suzuka.png"),
+        fecha: "07-09 Octubre",
         tipo: "actual"
     },
     {
@@ -149,6 +167,7 @@ export let circuitos = [
         lat: 30.1328,
         lng: -97.6411,
         imagen: require("../assets/images/circuitos/cota.png"),
+        fecha: "21-23 Octubre",
         tipo: "actual"
     },
     {
@@ -157,6 +176,7 @@ export let circuitos = [
         lat: 19.404197222222,
         lng: -99.088747222222,
         imagen: require("../assets/images/circuitos/mexico.png"),
+        fecha: "28-30 Octubre",
         tipo: "actual"
     },
     {
@@ -165,6 +185,7 @@ export let circuitos = [
         lat: -23.701111111111,
         lng: -46.697222222222,
         imagen: require("../assets/images/circuitos/interlagos.png"),
+        fecha: "11-13 Noviembre",
         tipo: "actual"
     },
     {
@@ -173,6 +194,7 @@ export let circuitos = [
         lat: 24.466998132,
         lng: 54.601830926,
         imagen: require("../assets/images/circuitos/abuDhabi.png"),
+        fecha: "18-20 Noviembre",
         tipo: "actual"
     },
 

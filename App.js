@@ -19,9 +19,9 @@ const MapStack = createStackNavigator();
 function MapStackScreen() {
   return (
     <MapStack.Navigator initialRouteName='Mapa de Circuitos' screenOptions={{
-      headerBackTitleVisible: false
+      headerBackTitleVisible: false,
     }}>
-      <MapStack.Screen name="Mapa de Circuitos" component={Map} />
+      <MapStack.Screen name="Mapa de Circuitos" component={Map} options={{ title: 'Mapa' }} />
       <MapStack.Screen name="Detalles" component={Detalles} />
     </MapStack.Navigator>
   );
@@ -30,8 +30,10 @@ function MapStackScreen() {
 const ListStack = createStackNavigator();
 function ListStackScreen() {
   return (
-    <ListStack.Navigator initialRouteName='Listado de Circuitos'>
-      <ListStack.Screen name="Listado de Circuitos" component={Lista} />
+    <ListStack.Navigator initialRouteName='List' screenOptions={{
+      headerBackTitleVisible: false,
+    }}>
+      <ListStack.Screen name="List" component={Lista} options={{ title: 'Calendario F1 2022' }} />
     </ListStack.Navigator>
   );
 }

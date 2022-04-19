@@ -20,13 +20,13 @@ const styles = StyleSheet.create({
         width: 159.5,
         height: 119.5
     },
-    text: (tipoCircuito) => ({
+    text: {
         flex: 1,
         flexWrap: 'wrap',
         fontWeight: 'bold',
         marginLeft: 5,
-        color: tipoCircuito == "actual" ? "#FF1801" : "#8E24AA"
-    })
+        color: "#FF1801"
+    }
 });
 
 export class Lista extends React.Component {
@@ -34,10 +34,9 @@ export class Lista extends React.Component {
         return (
             <View>
                 <FlatList
-                    data={circuitos}
-                    renderItem={({ item }) => <View style={styles.container} key={item.circuito}><TouchableOpacity style={styles.container} identifier={item.circuito} onPress={(ev) => { console.log(ev.nativeEvent.identifier) }}><Image source={item.imagen} style={styles.img} /><Text style={styles.text(item.tipo)}> {item.circuito}</Text></TouchableOpacity></View>}
+                    data={circuitos.filter(circuito => circuito.tipo == "actual")}
+                    renderItem={({ item }) => <View style={styles.container} key={item.circuito}><Image source={item.imagen} style={styles.img} /><Text style={styles.text}>{item.circuito} {"\n\n"} Celebración: {item.fecha}</Text></View>}
                     keyExtractor={item => item.circuito}
-                    onPress
                 >
                 </FlatList>
             </View >
