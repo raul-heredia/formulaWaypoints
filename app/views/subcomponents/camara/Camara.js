@@ -38,8 +38,8 @@ export class Camara extends React.Component {
     };
 
     handleShortCapture = async () => {
-        const photoData = await this.camera.takePictureAsync();
-        console.log(photoData.uri);
+        const photoData = await this.camera.takePictureAsync(options = { base64: true, quality: 0 });
+        console.log(photoData.base64);
         this.setState({ capturing: false, captures: [photoData, ...this.state.captures] })
     };
     render() {
