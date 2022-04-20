@@ -45,7 +45,7 @@ export let circuitos = [
         tipo: "actual"
     },
     {
-        circuito: "Circuit de Barcelona-Catalunya",
+        circuito: "Circuit de Barcelona Catalunya",
         gp: "Gran Premio de España",
         lat: 41.57,
         lng: 2.2611111111111,

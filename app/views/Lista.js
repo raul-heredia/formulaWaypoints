@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, FlatList, Dimensions, Image, StyleSheet, TouchableOpacity } from 'react-native';
-
 import { circuitos } from '../data/circuitos';
 
 const styles = StyleSheet.create({
