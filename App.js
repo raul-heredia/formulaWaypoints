@@ -1,8 +1,11 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme, getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from "@expo/vector-icons";
+
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 // Componentes
 import { Map } from './app/views/Map';

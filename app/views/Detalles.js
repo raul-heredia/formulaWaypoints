@@ -29,42 +29,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#fff',
     },
-    preview: {
-        flex: 2,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-
-    },
-    capture: {
-        width: 200,
-        height: 40,
-        borderRadius: 35,
-        borderWidth: 5,
-        borderColor: '#FFF',
-        marginBottom: 15,
-
-    },
-    cancel: {
-        position: 'absolute',
-        right: 20,
-        top: 20,
-        backgroundColor: 'transparent',
-        color: '#FFF',
-        fontWeight: '600',
-        fontSize: 17,
-    },
-    Button: {
-        width: 200,
-        height: 200,
-    }
 });
 export class Detalles extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             path: null,
-            image: null,
-            setImage: null
+            galleryImage: null,
+            images: [],
         };
     }
 
@@ -75,17 +47,11 @@ export class Detalles extends React.Component {
             allowsEditing: true,
             aspect: [16, 9],
             quality: 1,
-            base64: true
         });
 
         if (!result.cancelled) {
-            const base64Data = result.base64
-            const base64 = await fetch(base64Data);
-            const base64Response = await fetch(`data:image/jpeg;base64,${base64Data}`);
-            const blob = await base64Response.blob()
-            this.state.setImage = result.base64
-            console.log(blob);
-            //insertDb(circuitoSqlite, result.base64);
+            this.setState({ galleryImage: result.uri })
+            insertDb(circuitoSqlite, result.uri);
         }
     };
     render() {
@@ -93,9 +59,9 @@ export class Detalles extends React.Component {
         let circuito = circuitos.find(c => c.circuito == circuitoParam)
         let circuitoSqlite = circuitoParam.replace(/\s/g, '');
         initDb(circuitoSqlite);
-        loadImg(circuitoSqlite)
+        loadImg(circuitoSqlite);
         return (
-            <View style={styles.container}>
+            <View style={styles.container} >
                 <Text style={styles.title(circuito.tipo)}>{circuito.circuito}</Text>
                 <Text style={styles.subTitle}>{circuito.gp ? circuito.gp : circuito.pais}</Text>
                 <Text style={styles.normalFont}>Layout: </Text>
@@ -105,16 +71,19 @@ export class Detalles extends React.Component {
                         onPress={() => this.pickImage(circuitoSqlite)}
                         title="Seleccionar Imagen de la Galería"
                         color="#FF1801" />
-                    {this.state.image && <Image source={{ uri: this.state.image }} style={{ width: 200, height: 200 }} />}
                 </View>
                 <View>
                     <Button
-                        onPress={() => this.props.navigation.navigate('Camara')}
+                        onPress={() => this.props.navigation.navigate('Camara', { circuito: circuitoSqlite })}
                         title="Cámara"
                         color="#8E24AA"
                     />
                 </View>
-            </View>
+                {this.state.galleryImage && <Image source={{ uri: this.state.galleryImage }} style={{
+                    width: 200, height: 200, alignItems: 'center',
+                    justifyContent: 'center',
+                }} />}
+            </View >
         );
     }
 }

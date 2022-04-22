@@ -5,6 +5,7 @@ import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
 import styles from './styles';
 import Toolbar from './toolbar.component';
+import { db, initDb, insertDb, loadImg } from '../../../data/sqlite';
 
 export class Camara extends React.Component {
     camera = null;
@@ -18,7 +19,6 @@ export class Camara extends React.Component {
         cameraType: Camera.Constants.Type.back,
         hasCameraPermission: null,
     };
-
     async componentDidMount() {
         const camera = await Permissions.askAsync(Permissions.CAMERA);
         const audio = await Permissions.askAsync(Permissions.AUDIO_RECORDING);
@@ -38,8 +38,9 @@ export class Camara extends React.Component {
     };
 
     handleShortCapture = async () => {
-        const photoData = await this.camera.takePictureAsync(options = { base64: true, quality: 0 });
-        console.log(photoData.base64);
+        let circuitoSqlite = this.props.route.params.circuito;
+        const photoData = await this.camera.takePictureAsync();
+        insertDb(circuitoSqlite, photoData.uri);
         this.setState({ capturing: false, captures: [photoData, ...this.state.captures] })
     };
     render() {
